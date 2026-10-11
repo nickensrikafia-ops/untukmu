@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #07152e,
+        #123e78,
+        #3478b9
+    );
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+    box-shadow:  0 10px 40px rgba(0, 0, 0, 0.2);
+
+    animation: muncul 1s ease;
+}
+
+/* KARTU UTAMA */
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+
+    animation: fadeIn 1s ease;
+}
+
+/* HATI */
+.heart {
+    font-size: 55px;
+    color: #c4e7ff;
+    margin-bottom: 12px;
+
+    animation: floating 2s ease-in-out infinite;
+}
+
+/* TEKS KECIL */
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #c8e8ff;
+    margin-bottom: 18px;
+}
+
+/* JUDUL */
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* DESKRIPSI */
+.description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #e1f1ff;
+}
+
+/* KOTAK PESAN */
+.message-box {
+    min-height: 125px;
+    margin: 25px 0;
+    padding: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    transition: 0.4s ease;
+}
+
+.message-box:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-3px);
+}
+
+/* ISI PESAN */
+#message {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+}
+
+/* TOMBOL */
+button {
+    padding: 14px 26px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #e0f3ff,
+        #a9d9ff
+    );
+
+    color: #123e78;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 20px rgba(137, 205, 255, 0.20);
+}
+
+/* EFEK TOMBOL */
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(173, 221, 255, 0.35);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #c8e8ff;
+}
+
+/* ANIMASI HATI */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ANIMASI KARTU */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMASI BACKGROUND */
+@keyframes backgroundGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    #message {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 13px 22px;
+    }
+}
+
+
+#musicButton {
+    display: block;
+    margin: 15px auto 0;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: none;
+}
+
+#musicButton:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
